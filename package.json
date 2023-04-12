@@ -1,0 +1,30 @@
+{
+  "name": "@hexlet/code",
+  "version": "1.0.0",
+  "description": "Chat like Slack",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx start-server -s ./frontend/build",
+    "postinstall": "npm ci --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "startserve": "node index.js"
+  },
+  "proxy": "http://localhost:4000",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DSFirstaev/frontend-project-12.git"
+  },
+  "keywords": [
+    "Chat",
+    "slack"
+  ],
+  "author": "Dmitry Firstaev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DSFirstaev/frontend-project-12/issues"
+  },
+  "homepage": "https://github.com/DSFirstaev/frontend-project-12#readme",
+  "dependencies": {
+    "@hexlet/chat-server": "^1.1.6"
+  }
+}
