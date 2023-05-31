@@ -5,8 +5,8 @@
   "description": "Chat like Slack",
   "main": "index.js",
   "scripts": {
-    "start": "npx start-server -s ./frontend/build",
-    "postinstall": "npm ci --prefix frontend",
+    "start": "start-server -s ./frontend/build",
+    "postinstall": "cd frontend && npm ci",
     "build": "npm run build --prefix frontend",
     "startserve": "node index.js"
   },
