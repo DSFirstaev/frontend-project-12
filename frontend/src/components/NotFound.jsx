@@ -1,4 +1,4 @@
-import imagePath from '../assets/notFound.jpg';
+import imagePath from '../assets/notFound.png';
 
 const NotFound = () => (
   <div className="text-center">
