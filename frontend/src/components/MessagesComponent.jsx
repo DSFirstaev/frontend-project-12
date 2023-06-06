@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 
 import MessageForm from './MessageForm.jsx';
 import MessagesHeader from './MessagesHeader.jsx';
-import Message from './MessageForm.jsx';
+import Message from './Message.jsx';
 
 const MessagesComponent = () => {
   const channels = useSelector((s) => s.channelsInfo.channels);
