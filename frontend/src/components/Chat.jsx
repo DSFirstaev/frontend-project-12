@@ -20,7 +20,6 @@ const ChatPage = () => {
   const dispatch = useDispatch();
 
   const channelsInfo = useSelector((s) => s.channelsInfo);
-  // console.log('channelsInfo:', channelsInfo);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,7 +35,7 @@ const ChatPage = () => {
   }, [dispatch]);
 
   if (channelsInfo.loading) {
-    return <h1>Loading...</h1>;
+    return <h1>Загрузка...</h1>;
   }
   return (
     <Container className="h-100 my-4 overflow-hidden rounded shadow">
