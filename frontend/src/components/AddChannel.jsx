@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import { useFormik } from 'formik';
 import leoProfanity from 'leo-profanity';
-import { Modal, FormGroup, FormControl } from 'react-bootstrap';
+import {
+  Modal, FormGroup, FormControl, FormLabel, Button, Form,
+} from 'react-bootstrap';
 import * as yup from 'yup';
 import { useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
@@ -61,37 +63,29 @@ const Add = ({ closeHandler }) => {
         <Modal.Title>{t('modals.addChannel')}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <form onSubmit={formik.handleSubmit}>
+        <Form onSubmit={formik.handleSubmit}>
           <FormGroup>
             <FormControl
-              data-testid="input-body"
+              className="mb-2"
               ref={refContainer}
               name="name"
+              id="name"
               required=""
               onChange={formik.handleChange}
               value={formik.values.name}
               isInvalid={!!formik.errors.name}
             />
-            <FormControl.Feedback type="invalid" className="invalid-feedback">
+            <FormLabel htmlFor="name" className="visually-hidden">{t('modals.nameChannel')}</FormLabel>
+            <FormControl.Feedback type="invalid">
               {formik.errors.name}
             </FormControl.Feedback>
+            <Modal.Footer>
+              <Button variant="secondary" type="button" onClick={closeHandler}>{t('modals.cancelButton')}</Button>
+              <Button variant="primary" type="submit" onClick={formik.handleSubmit}>{t('modals.addButton')}</Button>
+            </Modal.Footer>
           </FormGroup>
-        </form>
+        </Form>
       </Modal.Body>
-      <Modal.Footer>
-        <FormControl
-          className="me-2 btn btn-secondary"
-          type="button"
-          value={t('modals.cancelButton')}
-          onClick={closeHandler}
-        />
-        <FormControl
-          className="btn btn-primary"
-          type="submit"
-          value={t('modals.addButton')}
-          onClick={formik.handleSubmit}
-        />
-      </Modal.Footer>
     </Modal.Dialog>
   );
 };

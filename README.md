@@ -12,4 +12,4 @@
 
 *A simplified version of Slack chat. The chat has a system of registration, authorization. The chat has the ability to create channels, change channel names and delete them.*
 
-[Demo](https://frontend-project-12-production-72cb.up.railway.app)
+[Demo](https://frontend-project-12-production-8044.up.railway.app)

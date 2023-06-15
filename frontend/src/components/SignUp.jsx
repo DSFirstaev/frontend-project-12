@@ -156,7 +156,7 @@ const SignUp = () => {
                       || failedRegistration
                     }
                   />
-                  <FormLabel>{t('signUpPage.repeatPassword')}</FormLabel>
+                  <FormLabel htmlFor="confirmPassword">{t('signUpPage.repeatPassword')}</FormLabel>
                   <Form.Control.Feedback
                     type="invalid"
                     className="invalid-feedback"
@@ -165,6 +165,7 @@ const SignUp = () => {
                   </Form.Control.Feedback>
                 </FormGroup>
                 <Button
+                  type="submit"
                   className="w-100"
                   variant="outline-primary"
                   onClick={formik.handleSubmit}

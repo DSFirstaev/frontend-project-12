@@ -37,6 +37,7 @@ const ChannelsComponent = () => {
             onClick={openAddChannelWindow}
           >
             <BsPlusSquare />
+            <span className="visually-hidden">+</span>
           </Button>
         </div>
         <Nav
@@ -77,7 +78,9 @@ const ChannelsComponent = () => {
                     <span className="me-1">#</span>
                     {name}
                   </Button>
-                  <Dropdown.Toggle variant={id === currentChannelId ? 'secondary' : 'light'} />
+                  <Dropdown.Toggle variant={id === currentChannelId ? 'secondary' : 'light'}>
+                    <span className="visually-hidden">{t('channelControl')}</span>
+                  </Dropdown.Toggle>
                   <Dropdown.Menu>
                     <Dropdown.Item onClick={(e) => openRemoveChannelWindow(e)}>
                       {t('remove')}
